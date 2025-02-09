@@ -1,4 +1,4 @@
-module.exports = (str, { maxSequenceSize = 4, removeMalform = true } = {}) => {
+function betterDecodeURIComponent(str, { maxSequenceSize = 4, removeMalform = true } = {}) {
     if (typeof str !== 'string') throw new TypeError('Expected string but got ' + typeof str);
 
     try { return decodeURIComponent(str); } catch(e) { }
@@ -29,4 +29,14 @@ module.exports = (str, { maxSequenceSize = 4, removeMalform = true } = {}) => {
 
         return res;
     });
+}
+
+// CommonJS
+if (typeof exports === 'object' && typeof module === 'object') {
+    module.exports = betterDecodeURIComponent;
+// ES Modules
+} else if (typeof define === 'function' && define.amd) {
+    define([], function() { return betterDecodeURIComponent; });
+} else {
+    this.betterDecodeURIComponent = betterDecodeURIComponent;
 }
