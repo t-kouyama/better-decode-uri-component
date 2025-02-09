@@ -1,4 +1,4 @@
-module.exports.betterDecodeURIComponent = (str, { maxSequenceSize = 4, removeMalform = true } = {}) => {
+module.exports = (str, { maxSequenceSize = 4, removeMalform = true } = {}) => {
     if (typeof str !== 'string') throw new TypeError('Expected string but got ' + typeof str);
 
     try { return decodeURIComponent(str); } catch(e) { }

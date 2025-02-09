@@ -19,4 +19,5 @@ interface Options {
  * @throws {TypeError} When input is not a string
  * @returns decoded string
  */
-export function betterDecodeURIComponent(str: string, options?: Options): string;
+declare function betterDecodeURIComponent(str: string, options?: Options): string;
+export = betterDecodeURIComponent;

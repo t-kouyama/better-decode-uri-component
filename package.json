@@ -1,6 +1,6 @@
 {
   "name": "better-decode-uri-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Safe and maximum possible decodeURIComponent",
   "main": "index.js",
   "keywords": [
@@ -12,6 +12,9 @@
   ],
   "license": "MIT",
   "types": "index.d.ts",
+  "engines": {
+    "node": ">=6"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/t-kouyama/better-decode-uri-component.git"

@@ -11,7 +11,7 @@ npm install better-decode-uri-component
 ## Usage
 
 ```javascript
-const { betterDecodeURIComponent } = require('better-decode-uri-component');
+const betterDecodeURIComponent = require('better-decode-uri-component');
 
 // Normal usage (works like standard decodeURIComponent)
 betterDecodeURIComponent('Hello%20World'); // "Hello World"
