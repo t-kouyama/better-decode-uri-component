@@ -1,6 +1,6 @@
 {
   "name": "better-decode-uri-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Safe and maximum possible decodeURIComponent",
   "main": "index.js",
   "keywords": [
