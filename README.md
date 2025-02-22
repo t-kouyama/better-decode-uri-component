@@ -10,22 +10,38 @@ npm install better-decode-uri-component
 
 ## Usage
 
+Browser
+```html
+<script src="https://cdn.jsdelivr.net/npm/better-decode-uri-component"></script>
+```
+
+ES Modules
 ```javascript
-// ES Modules
 import betterDecodeURIComponent from 'better-decode-uri-component';
-// CommonJS
+```
+
+CommonJS
+```javascript
 const betterDecodeURIComponent = require('better-decode-uri-component');
+```
 
-// Normal usage (works like standard decodeURIComponent)
+Normal usage (works like standard decodeURIComponent)
+```javascript
 betterDecodeURIComponent('Hello%20World'); // "Hello World"
+```
 
-// Safely handles malformed sequences
+Safely handles malformed sequences
+```javascript
 betterDecodeURIComponent('Hello%FF%20World'); // "Hello World"
+```
 
-// Maximum possible decoding
+Maximum possible decoding
+```javascript
 betterDecodeURIComponent('%E6%97%A5%FF%E6%9C%AC%E8%AA%9E'); // "日本語"
+```
 
-// Keep malformed sequences with removeMalform: false
+Keep malformed sequences with removeMalform: false
+```javascript
 betterDecodeURIComponent('Hello%FF%20World', { removeMalform: false }); // "Hello%FF World"
 ```
 
